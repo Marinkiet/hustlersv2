@@ -5,21 +5,20 @@ import Navbar from './Components/Navbar/Navbar-component';
 import HeaderComponent from './Components/Header/Header-component';
 import ItemSectionsComponent from './Components/ItemSection/Item-Sections-Component';
 import FooterComponent from './Components/Footer/Footer-component';
-import eventsPage from './pages/Events/events-component';
-
-
+import EventsPage from './pages/Events/Events-component';
 function App() {
   return (
-    <div >
-      {/*<Navbar/>*/}
+    <div className='App'>
+      <Navbar/>
+      <HeaderComponent/>
       <Routes>
       <Route   path="/" element = {<HeaderComponent/>}/>
-      <Route  exact path="/Events" element = {<eventsPage/>}/>
+      <Route  exact path="/Events" element = {<EventsPage/>}/>
    </Routes>
    
-      <HeaderComponent/>
+    {/* 
       <ItemSectionsComponent/>
-      <FooterComponent/>
+    <FooterComponent/>*/}
     </div>
   );
 }

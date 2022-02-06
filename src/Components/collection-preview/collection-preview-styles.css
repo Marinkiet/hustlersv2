@@ -1,0 +1,23 @@
+.collection-preview {
+   display: flex;
+    margin-bottom: 30px;
+    flex-direction: column;
+    overflow-y: hidden;   
+    
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    color: inherit;
+    font-family: Geneva, Tahoma, sans-serif;
+  }
+  .preview {
+    display: flex;
+    justify-content: space-between;  
+    overflow-x: scroll;
+    overflow-y:hidden ;
+    scroll-behavior: smooth;
+    }
+  

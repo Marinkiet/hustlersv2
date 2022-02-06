@@ -7,14 +7,14 @@ const Navbar = ()=> (
       <div className='links'>
         <div  className='left_links'>
             <Link  className='left_links' to='/'><img src="logo.png"></img></Link>  
-            <Link  className='left_links' to='./aboutusPage'>About Us</Link>
-            <Link  className='left_links' to='./contactusPage'>Contact</Link>
+            <Link  className='left_links' to='./AboutusPage'>About Us</Link>
+            <Link  className='left_links' to='./ContactUsPage'>Contact</Link>
          </div>
          
          <div className='middle_links'>
          <Link className='middle_link' to='./ProductsPage'>Products</Link>
          <Link className='middle_link' to='./ServicesPage'>Services</Link>
-         <Link className='middle_link' to='../Events'>Events</Link>
+         <Link className='middle_link' to='./EventsPage'>Events</Link>
          <Link className='middle_link' to='./HustlersPage'>Hustlers</Link>
 
 

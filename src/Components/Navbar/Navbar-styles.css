@@ -4,11 +4,13 @@
     font-weight:300;
     margin-right:10px;
     text-decoration:none;
+    color: inherit;
     font-size:15px;
     font-family:  Geneva, Verdana, sans-serif;
 }
 .links{
     display:flex;
+    
     min-height:60px;
     position:fixed;
     align-items:center;
@@ -17,15 +19,21 @@
     top:0;
     left:0;
     right:0;
+    background-color: rgba(255, 255, 255, 0.295);
+
+    
 }
 .right_links{
     display: flex;
+    color: inherit;
     align-items: center;
+    
 }
 .right_link{
     font-weight:300;
     margin-right:10px;
     text-decoration:none;
+    color: inherit;
     font-size:14px;
     display:flex;
     font-family:  Geneva, Verdana, sans-serif;
@@ -34,6 +42,7 @@
   
     display:flex;
     align-items:center;
+    color: inherit;
     justify-content:center;
     flex:1; 
    
@@ -42,6 +51,7 @@
     font-weight:300;
     padding:0 20px;
     display: flex;
+    color: inherit;
     flex-wrap:no-wrap;
     text-decoration:none;
     font-size:14px;
