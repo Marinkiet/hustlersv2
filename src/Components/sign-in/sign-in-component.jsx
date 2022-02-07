@@ -1,5 +1,6 @@
 import React from "react";
 import './sign-in.styles.css';
+import CustomButton from '../Custom Button/custom-button.component'
 import FormInput from "../form-input/form-input.component";
 //class component to know whos signed in -state
 class SignIn extends React.Component{
@@ -46,7 +47,7 @@ class SignIn extends React.Component{
                 label='password'/>
 
 
-                <input type='submit' value='Submit Form'/>
+                <CustomButton type='submit'>Sign In</CustomButton>
 
             </form>
             </div>
