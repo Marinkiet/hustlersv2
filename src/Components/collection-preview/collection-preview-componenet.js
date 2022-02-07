@@ -8,7 +8,7 @@ const CollectionPreview =({title,items})=>(
     <Link to={`${title}` + 'Page'}className="title">{title.toUpperCase()}</Link>
     <div className="preview">
     {items
-    //.filter((item,idx) => idx < 4)
+    
     .map(({id, ...otherItemProps})=>(
       <CollectionItem key={id}{...otherItemProps}/>
 
