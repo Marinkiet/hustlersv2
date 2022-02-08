@@ -4,10 +4,14 @@ import Navbar from './Components/Navbar/Navbar-component';
 import HeaderComponent from './Components/Header/Header-component';
 import EventsPage from './pages/Events/Events-component';
 import SignIn from './Components/sign-in/sign-in-component';
+import SearchOutlined from "@material-ui/icons/SearchOutlined";
+import Searchbar from './Components/Search/Search-component';
 function App() {
   return (
-    <div >
+    <div>
       <Navbar/>
+      <Searchbar/>
+
       <HeaderComponent/>
       <Routes>
       <Route   exact={true} path="/" element = {<HeaderComponent/>}/>

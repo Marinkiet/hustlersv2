@@ -12,6 +12,9 @@ class HeaderComponent extends React.Component{
 
   }
   render(){
+      <div>
+     
+      </div>
       const {collections} = this.state;
 
       return(

@@ -1,8 +1,11 @@
-import React from 'react';
+import { Avatar } from '@material-ui/core';
 import './Navbar-styles.css';
+import React from 'react';
 import {Link} from "react-router-dom";
+
 const Navbar = ()=> (
- 
+
+
 
       <div className='links'>
         <div  className='left_links'>
@@ -25,8 +28,10 @@ const Navbar = ()=> (
             <Link className='right_link' to="./Advertise">Advertise/</Link>
             <Link className='right_link' to="./Signin">Sign In</Link>
             <Link className='right_link' to="./Menu"> Menu</Link>
+            <Avatar src={`https://avatars.dicebear.com/api/human/123.svg`}/>
          </div>
     </div>
   )
+
 
 export default Navbar;
