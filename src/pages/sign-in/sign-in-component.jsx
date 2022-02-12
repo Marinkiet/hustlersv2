@@ -1,7 +1,8 @@
 import React from "react";
 import './sign-in.styles.css';
-import CustomButton from '../Custom Button/custom-button.component'
-import FormInput from "../form-input/form-input.component";
+import CustomButton from "../../Components/Custom Button/custom-button.component";
+import FormInput from "../../Components/form-input/form-input.component";
+import {signInWithGoogle} from "../../firebase/firebase.utils"
 //class component to know whos signed in -state
 class SignIn extends React.Component{
     constructor(props){
@@ -47,8 +48,10 @@ class SignIn extends React.Component{
                 label='password'/>
 
 
-                <CustomButton type='submit'>Sign In</CustomButton>
-
+                <div className="buttons">
+                <CustomButton type='submit'>Sign in</CustomButton>
+                <CustomButton onClick = {signInWithGoogle} isGoogleSignIn>Sign in with Google</CustomButton>
+            </div>
             </form>
             </div>
         )

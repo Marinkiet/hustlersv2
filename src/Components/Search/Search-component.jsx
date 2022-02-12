@@ -6,10 +6,12 @@ function Searchbar() {
     return (
 
 <div className='search'>
-
 <div className="searchContainer">
 <SearchOutlined/>
-<input type="text" placeholder='Search ...'/>
+<input 
+type="search" 
+placeholder="Search..."
+/>
 </div>
 
 </div>

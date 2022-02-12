@@ -22,4 +22,7 @@
   .searchContainer > input {
     border: none;
     margin-left: 10px;
+    outline: none;
+    width:80%;
+    
   }

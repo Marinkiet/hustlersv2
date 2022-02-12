@@ -10,7 +10,11 @@ const CollectionPreview =({title,items})=>(
     {items
     
     .map(({id, ...otherItemProps})=>(
-      <CollectionItem key={id}{...otherItemProps}/>
+      <CollectionItem 
+      key={id}
+      {...otherItemProps}
+ 
+     />
 
     ))
     }

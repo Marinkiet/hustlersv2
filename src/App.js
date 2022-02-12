@@ -1,27 +1,48 @@
+import React from 'react';
 import './App.css';
 import { Routes, Route } from "react-router-dom";
 import Navbar from './Components/Navbar/Navbar-component';
 import HeaderComponent from './Components/Header/Header-component';
 import EventsPage from './pages/Events/Events-component';
-import SignIn from './Components/sign-in/sign-in-component';
-import SearchOutlined from "@material-ui/icons/SearchOutlined";
+import SignIn from './pages/sign-in/sign-in-component';
 import Searchbar from './Components/Search/Search-component';
-function App() {
+import { auth } from './firebase/firebase.utils';
+class App extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      currentUser:null
+    }
+  }
+  unsubscibeFromAuth = null;
+
+  componentDidMount(){
+    auth.onAuthStateChanged(user=>{
+      this.setState({currentUser:user});
+      console.log(user);
+
+    })
+  }
+  componentWillUnmount(){
+    this.unsubscibeFromAuth();
+  }
+  render(){
+
   return (
     <div>
-      <Navbar/>
-      <Searchbar/>
-
-      <HeaderComponent/>
+      <Navbar
+      currentUser = {this.state.currentUser}/>      
+      
       <Routes>
       <Route   exact={true} path="/" element = {<HeaderComponent/>}/>
       <Route  exact={true} path="/Events" element = {<EventsPage/>}/>
-      <Route  exact={true}path="/signin" element={<SignIn/>}/>
+      <Route exact path="Signin" element={<SignIn/>}/>
 
       </Routes>
    
     </div>
   );
+}
 }
 
 export default App;

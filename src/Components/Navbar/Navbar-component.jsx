@@ -2,8 +2,8 @@ import { Avatar } from '@material-ui/core';
 import './Navbar-styles.css';
 import React from 'react';
 import {Link} from "react-router-dom";
-
-const Navbar = ()=> (
+import { auth } from '../../firebase/firebase.utils';
+const Navbar = ({currentUser})=> (
 
 
 
@@ -26,11 +26,18 @@ const Navbar = ()=> (
 
          <div className='right_links'>
             <Link className='right_link' to="./Advertise">Advertise/</Link>
-            <Link className='right_link' to="./Signin">Sign In</Link>
             <Link className='right_link' to="./Menu"> Menu</Link>
             <Avatar src={`https://avatars.dicebear.com/api/human/123.svg`}/>
-         </div>
+         {(
+            currentUser?
+            <div className='right_link' onClick={()=>auth.signOut()}>SIGN OUT</div>
+            :
+            <Link className='right_link' to='./signin'>SIGN IN</Link>
+        )}
+        </div>
+     
     </div>
+    
   )
 
 

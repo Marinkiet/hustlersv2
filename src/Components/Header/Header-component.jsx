@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header-styles.css';
 import SHOP_DATA from "./shop.data";
+import Searchbar from '../Search/Search-component';
 import CollectionPreview from '../collection-preview/collection-preview-componenet';
 class HeaderComponent extends React.Component{
   constructor(props){
@@ -12,16 +13,18 @@ class HeaderComponent extends React.Component{
 
   }
   render(){
-      <div>
-     
-      </div>
+      
       const {collections} = this.state;
 
       return(
       <div className="shopPage">
+      <Searchbar/>
       {
       collections.map(({id,...otherCollections})=>(
-          <CollectionPreview key={id}{...otherCollections}/>
+          <CollectionPreview 
+          key={id}
+          {...otherCollections}
+         />
       ))
       }
       </div>
